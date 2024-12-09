@@ -1,0 +1,100 @@
+			<div id="pwe-footer2">
+				<div class="pwe-narrow-content">
+					<div class="row">
+						<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+							<div>
+								<div class="textwidget custom-html-widget">
+									<h2>
+										<a href="index.html">255 EVENT<i>®</i><span>weddings <small>•</small>
+												events</span></a>
+									</h2>
+									<div class="social"> <a href="https://www.facebook.com/"><i
+												class="ti-facebook"></i></a> <a href="http://twitter.com/"><i
+												class="ti-twitter-alt"></i></a> <a href="https://www.instagram.com/"><i
+												class="ti-instagram"></i></a> <a href="https://www.pinterest.com/"><i
+												class="ti-pinterest"></i></a> </div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+							<div>
+								<div class="textwidget custom-html-widget">
+									<h6>Ring</h6>
+									<p>+255.123.444.0000</p>
+									<h6>Write</h6>
+									<p>info@255events.co.tz</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+							<div>
+								<div class="textwidget custom-html-widget">
+									<h6>Address</h6>
+									<p>Wallaway 5st St Mbezi Beach
+										<br />Dar Es Salaam, TZ. 2
+									</p>
+									<p class="copyright">&copy; 2024. All rights reserved.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type='text/javascript'>
+		const lazyloadRunObserver = () => {
+			const dataAttribute = 'data-e-bg-lazyload';
+			const lazyloadBackgrounds = document.querySelectorAll(`[${dataAttribute}]:not(.lazyloaded)`);
+			const lazyloadBackgroundObserver = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						let lazyloadBackground = entry.target;
+						const lazyloadSelector = lazyloadBackground.getAttribute(dataAttribute);
+						if (lazyloadSelector) {
+							lazyloadBackground = entry.target.querySelector(lazyloadSelector);
+						}
+						lazyloadBackground.classList.add('lazyloaded');
+						lazyloadBackgroundObserver.unobserve(entry.target);
+					}
+				});
+			}, { rootMargin: '100px 0px 100px 0px' });
+			lazyloadBackgrounds.forEach((lazyloadBackground) => {
+				lazyloadBackgroundObserver.observe(lazyloadBackground);
+			});
+		};
+		const events = [
+			'DOMContentLoaded',
+			'elementor/lazyload/observe',
+		];
+		events.forEach((event) => {
+			document.addEventListener(event, lazyloadRunObserver);
+		});
+	</script>
+	<script src="/ce-content/plugins/contact-form-7/includes/js/scriptsce52.js?ver=5.0.2"
+		id="contact-form-7-js"></script>
+	<script src="/ce-content/themes/pwe/assets/js/jquery.min109c.js?ver=6.6.2" id="jquery-v2.2.4-js"></script>
+	<script src="/ce-content/themes/pwe/assets/js/modernizr-2.6.2.min109c.js?ver=6.6.2" id="modernizr-js"></script>
+	<script src="/ce-content/themes/pwe/assets/js/jquery.easing.1.3109c.js?ver=6.6.2" id="jquery-easing-js"></script>
+	<script src="/ce-content/themes/pwe/assets/js/bootstrap.min109c.js?ver=6.6.2" id="bootstrap-js"></script>
+	<script src="/ce-content/themes/pwe/assets/js/jquery.waypoints.min109c.js?ver=6.6.2"
+		id="jquery-waypoints-js"></script>
+	<script src="/ce-content/themes/pwe/assets/js/jquery.flexslider-min109c.js?ver=6.6.2"
+		id="jquery-flexslider-js"></script>
+	<script src="/ce-content/themes/pwe/assets/js/sticky-kit.min109c.js?ver=6.6.2" id="sticky-kit-js"></script>
+	<script src="/ce-content/themes/pwe/assets/js/jquery.magnific-popup.min109c.js?ver=6.6.2"
+		id="jquery-magnific-popup-js"></script>
+	<script src="/ce-content/themes/pwe/assets/js/owl.carousel.min109c.js?ver=6.6.2" id="owl-carousel-js"></script>
+	<script src="/ce-content/themes/pwe/assets/js/main109c.js?ver=6.6.2" id="pwe-main-js"></script>
+	<script src="/ce-content/plugins/bdevs-elementor/assets/js/bdevs-elementor8a54.js?ver=1.0.0"
+		id="bdevs-elementor-js"></script>
+	<script src="/ce-content/plugins/elementor/assets/js/webpack.runtime.minf416.js?ver=3.11.0"
+		id="elementor-webpack-runtime-js"></script>
+	<script src="/ce-content/plugins/elementor/assets/js/frontend-modules.minf416.js?ver=3.11.0"
+		id="elementor-frontend-modules-js"></script>
+	<script src="/ce-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js?ver=4.0.2"
+		id="elementor-waypoints-js"></script>
+	<script src="/ce-includes/js/jquery/ui/core.minb37e.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+	
+	<script src="/ce-content/plugins/elementor/assets/js/frontend.minf416.js?ver=3.11.0"
+		id="elementor-frontend-js"></script>

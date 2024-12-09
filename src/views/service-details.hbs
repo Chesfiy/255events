@@ -1,0 +1,139 @@
+<div class="banner-container">
+  <div class="banner-img">
+    <img
+      class="banner-img-width"
+      src="/ce-content/themes/pwe/assets/images/topbanner.jpg"
+      alt=""
+    />
+  </div>
+  <div class="banner-head">
+    <div class="banner-head-padding banner-head-margin">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="heading-meta"> our services </span>
+            <h2
+              class="pwe-heading animate-box"
+              data-animate-effect="fadeInLeft"
+            >
+              {{service.name}}
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="about-section pt-0 pb-60">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5 animate-box" data-animate-effect="fadeInLeft">
+          <img
+            src="{{service.imageurl}}"
+            class="img-fluid mb-30"
+            alt=""
+          />
+        </div>
+        <div class="col-md-7 animate-box" data-animate-effect="fadeInLeft">
+          
+            {{service.description}}
+          {{!-- <h4 class="pwe-about-subheading">Package Includes</h4>
+          <ol>
+            <li>PWE Weddings &#038; Events Workbook</li>
+            <li>
+              Unlimited access to expert wedding advice (via e-mail)
+            </li>
+            <li>Access to Preferred Vendors List</li>
+            <li>Wedding Assistant for wedding day</li>
+            <li>
+              Oversee and help with ceremony/reception site set up &#038; tear
+              down
+            </li>
+            <li>Review of Vendor contracts</li>
+            {{#each service.packages}}
+            <li>
+              Distribute final payments and gratuities to vendors as necessary
+            </li>
+            {{/each}}
+          </ol> --}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  class="elementor-section elementor-top-section elementor-element elementor-element-0661e46 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+  data-id="0661e46"
+  data-element_type="section"
+>
+  <div class="elementor-container elementor-column-gap-no">
+    <div
+      class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-801f77f"
+      data-id="801f77f"
+      data-element_type="column"
+    >
+      <div class="elementor-widget-wrap elementor-element-populated">
+        <div
+          class="elementor-element elementor-element-d0d6ea4 elementor-align-left elementor-widget elementor-widget-pages-pricing"
+          data-id="d0d6ea4"
+          data-element_type="widget"
+          data-widget_type="pages-pricing.default"
+        >
+          <div class="elementor-widget-container">
+            <div class="price-section pt-60 pb-60 price bg-pink">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    <span class="heading-meta">255 event</span>
+                    <h2
+                      class="pwe-heading animate-box"
+                      data-animate-effect="fadeInLeft"
+                    >
+                      {{service.name}} Packages
+                    </h2>
+                  </div>
+                </div>
+                {{#if service.packages}}
+                <div class="row">
+                  <div  class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                    
+                      {{#each service.packages}}
+                         <div class="item">
+                            <div class="cont">
+                              <div class="type">
+                                <h6>{{name}}</h6>
+                              </div>
+                              <div class="value">
+                                <h4>{{price}}<span>$</span></h4>
+                                <p>Starting From</p>
+                              </div>
+                              <div class="feat">
+                                <ul>
+                                  {{#each this.items}}
+                                    <li>{{this}}</li>
+                                  {{/each}}
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="btn-contact">
+                              <a href="index128b.html?page_id=48"><span>See more</span></a>
+                            </div>
+                          </div>
+                      {{/each}}
+                    
+                    </div>
+                  </div>
+                </div>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

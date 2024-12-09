@@ -1,0 +1,80 @@
+<div class="banner-container">
+    <div class="banner-img"> <img class="banner-img-width" src="/ce-content/uploads/2021/06/topbanner-2-scaled.jpg"
+            alt=""> </div>
+    <div class="banner-head">
+        <div class="banner-head-padding banner-head-margin">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12"> <span class="heading-meta">..portfolio</span>
+                        <h2 class="pwe-heading animate-box" data-animate-effect="fadeInLeft">{{portfolio.name}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio -->
+<div class="pwe-section pt-0 pb-60">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
+                <p>{{portfolio.description}}</p>
+            </div>
+            <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                <p><b>Wedding Planner :</b> {{portfolio.weddingPlanner}}
+                    <br> <b>Wedding Photographer :</b> {{portfolio.photographer}}
+                    <br> <b>Location :</b> {{portfolio.location}}
+                </p>
+            </div>
+            <style type="text/css">
+                #gallery-1 {
+                    margin: auto;
+                }
+
+                #gallery-1 .gallery-item {
+                    float: left;
+                    margin-top: 10px;
+                    text-align: center;
+                    width: 33%;
+                }
+
+                #gallery-1 img {
+                    border: 2px solid #cfcfcf;
+                }
+
+                #gallery-1 .gallery-caption {
+                    margin-left: 0;
+                }
+            </style>
+            <div id='gallery-1' class='gallery galleryid-75 gallery-columns-3 gallery-size-thumbnail'>
+                {{#each portfolio.portfolioImage}}
+                    <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                            <a href='#'><img decoding="async" width="150" height="150"
+                                    src="{{imageurl}}"
+                                    class="attachment-thumbnail size-thumbnail" alt=""
+                                    srcset="{{imageurl}} 150w, {{imageurl}} 300w, {{imageurl}} 100w"
+                                    sizes="(max-width: 150px) 100vw, 150px" /></a>
+                        </dt>
+                    </dl>
+                {{/each}}
+                <br style="clear: both" />
+            </div>
+        </div>
+        <!-- Gallery -->
+        <div class="row mb-60">
+            {{#each portfolio.portfolioImage}}
+            <div class="col-md-4 gallery-item animate-box" data-animate-effect="fadeInLeft">
+                <a href="{{imageurl}}" title="{{portfolio.name}}" class="img-zoom">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="{{imageurl}}"
+                                class="img-fluid mx-auto d-block" alt="work-img"> </div>
+                        <div class="gallery-detail text-center"> <i class="ti-plus"></i> </div>
+                    </div>
+                </a>
+            </div>
+            {{/each}}
+
+        </div>
+    </div>
+</div>

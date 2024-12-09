@@ -1,0 +1,74 @@
+<section
+    class="elementor-section elementor-top-section elementor-element elementor-element-fd850a3 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+    data-id="fd850a3" data-element_type="section">
+    <div class="elementor-container elementor-column-gap-no">
+        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a116a0f"
+            data-id="a116a0f" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-c7d22f3 elementor-align-left elementor-widget elementor-widget-pages-header"
+                    data-id="c7d22f3" data-element_type="widget" data-widget_type="pages-header.default">
+                    <div class="elementor-widget-container">
+
+                        <div class="banner-container">
+                            <div class="banner-img"> <img decoding="async" class="banner-img-width"
+                                    src="/ce-content/uploads/2021/06/topbanner-2-scaled.jpg" alt="">
+                            </div>
+                            <div class="banner-head">
+                                <div class="banner-head-padding banner-head-margin">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <span class="heading-meta">.works</span>
+                                                <h2 class="pwe-heading animate-box" data-animate-effect="fadeInLeft">Our
+                                                    Portfolio</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section
+    class="elementor-section elementor-top-section elementor-element elementor-element-5030d2c elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+    data-id="5030d2c" data-element_type="section">
+    <div class="elementor-container elementor-column-gap-no">
+        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f842aab"
+            data-id="f842aab" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-0cf45f7 elementor-align-left elementor-widget elementor-widget-pages-portfolio"
+                    data-id="0cf45f7" data-element_type="widget" data-widget_type="pages-portfolio.default">
+                    <div class="elementor-widget-container">
+
+
+                        <div class="portfolio-section portfolio pt-0 pb-60">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    {{#each portfolios}}
+                                        <div class="col-md-4">
+                                            <div class="item animate-box" data-animate-effect="fadeInLeft">
+                                                <div class="portfolio-img">
+                                                    <a href="/portfolio/{{id}}"><img decoding="async"
+                                                            src="{{coverImg}}" alt=""></a>
+                                                </div>
+                                                <div class="content">
+                                                    <h5><a href="/portfolio/{{id}}">{{name}}</a></h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

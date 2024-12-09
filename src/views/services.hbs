@@ -1,0 +1,183 @@
+<section
+  class="elementor-section elementor-top-section elementor-element elementor-element-9ce7978 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+  data-id="9ce7978"
+  data-element_type="section"
+>
+  <div class="elementor-container elementor-column-gap-no">
+    <div
+      class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4dfab89"
+      data-id="4dfab89"
+      data-element_type="column"
+    >
+      <div class="elementor-widget-wrap elementor-element-populated">
+        <div
+          class="elementor-element elementor-element-dbf00a0 elementor-align-left elementor-widget elementor-widget-pages-header"
+          data-id="dbf00a0"
+          data-element_type="widget"
+          data-widget_type="pages-header.default"
+        >
+          <div class="elementor-widget-container">
+            <div class="banner-container">
+              <div class="banner-img">
+                <img
+                  decoding="async"
+                  class="banner-img-width"
+                  src="/ce-content/uploads/2021/06/topbanner-1-scaled.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="banner-head">
+                <div class="banner-head-padding banner-head-margin">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <span class="heading-meta">weddings . events</span>
+                        <h2
+                          class="pwe-heading animate-box"
+                          data-animate-effect="fadeInLeft"
+                        >
+                          Our Services
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  class="elementor-section elementor-top-section elementor-element elementor-element-65c574a elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+  data-id="65c574a"
+  data-element_type="section"
+>
+  <div class="elementor-container elementor-column-gap-no">
+    <div
+      class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4e9a4c9"
+      data-id="4e9a4c9"
+      data-element_type="column"
+    >
+      <div class="elementor-widget-wrap elementor-element-populated">
+        <div
+          class="elementor-element elementor-element-781930a elementor-align-left elementor-widget elementor-widget-pages-services"
+          data-id="781930a"
+          data-element_type="widget"
+          data-widget_type="pages-services.default"
+        >
+          <div class="elementor-widget-container">
+            <div class="services-section services pt-0 pb-90">
+              <div class="container-fluid">
+                <div class="row">
+                  {{#each services}}
+                    <div
+                    class="col-md-4 animate-box"
+                    data-animate-effect="fadeInLeft"
+                  >
+                    <div class="item mb-30">
+                      <div class="position-re o-hidden">
+                        <img
+                          decoding="async"
+                          src="{{imageurl}}"
+                          alt=""
+                        />
+                      </div>
+                      <div class="con">
+                        <span class="category">
+                          <a
+                            href="/services/{{id}}"
+                          >{{category}}</a>
+                        </span>
+                        <h5>
+                          <a
+                            href="/services/{{id}}"
+                          >{{name}}</a>
+                        </h5>
+                        <a href="/services/{{id}}"><i
+                            class="ti-arrow-right"
+                          ></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  {{/each}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  class="elementor-section elementor-top-section elementor-element elementor-element-0661e46 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+  data-id="0661e46"
+  data-element_type="section"
+>
+  <div class="elementor-container elementor-column-gap-no">
+    <div
+      class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-801f77f"
+      data-id="801f77f"
+      data-element_type="column"
+    >
+      <div class="elementor-widget-wrap elementor-element-populated">
+        <div
+          class="elementor-element elementor-element-d0d6ea4 elementor-align-left elementor-widget elementor-widget-pages-pricing"
+          data-id="d0d6ea4"
+          data-element_type="widget"
+          data-widget_type="pages-pricing.default"
+        >
+          <div class="elementor-widget-container">
+            <div class="price-section pt-60 pb-60 price bg-pink">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    <span class="heading-meta">255 event</span>
+                    <h2
+                      class="pwe-heading animate-box"
+                      data-animate-effect="fadeInLeft"
+                    >
+                      Planning Packages
+                    </h2>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 owl-carousel owl-theme">
+                    {{#each parsedPackages}}
+                     <div class="item">
+                      <div class="cont">
+                        <div class="type">
+                          <h6>{{name}}</h6>
+                        </div>
+                        <div class="value">
+                          <h5>{{ formatPrice price 'sw-TZ' 'TZS'}}</h5>
+                          <p>Starting From</p>
+                        </div>
+                        <div class="feat">
+                          <ul>
+                              {{#each this.items}}
+                                <li>{{this}}</li>
+                              {{/each}}
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="btn-contact">
+                        <a href="/services/{{serviceId}}"><span>See more</span></a>
+                      </div>
+                    </div>
+                    {{/each}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

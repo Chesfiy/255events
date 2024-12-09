@@ -1,0 +1,84 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Service {
+  id Int @id @default(autoincrement())
+  name String
+  description String
+  category String
+  imageurl String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  package Package[]
+}
+
+
+model Testmonial {
+  id Int @id @default(autoincrement())
+  name String
+  description String
+  imageurl String
+  location String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Team {
+  id Int @id @default(autoincrement())
+  name String
+  title String
+  imageurl String
+  facebook String?
+  x String?
+  instargam String?
+  pinterest String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Package {
+  id Int @id @default(autoincrement())
+  name String
+  description String?
+  price Int
+  items String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  serviceId Int
+  service Service @relation(fields: [serviceId], references: [id])
+}
+
+model Portfolio {
+  id Int @id @default(autoincrement())
+  name String
+  description String
+  weddingPlanner String?
+  photographer String?
+  location String?
+  coverImg String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  portfolioImage PortfolioImage[]
+}
+
+model PortfolioImage{
+  id Int @id @default(autoincrement())
+  imageurl String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  porfolioId Int
+  portfolio Portfolio @relation(fields: [porfolioId], references: [id])
+}
