@@ -3,7 +3,7 @@ import express, { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client"
 import hbs, { engine, create } from "express-handlebars";
 import path from 'path'
-const handlebaHelpers = require("../helpers/hbshelper");
+const handlebaHelpers = require("./helpers/hbshelper");
 
 import HomeRouter from "./routes/web/home"
 import ServiceRoute from "./routes/web/service"
