@@ -2,7 +2,7 @@ import express from "express";
 import { PrismaClient } from "@prisma/client";
 import { engine } from "express-handlebars";
 import path from 'path';
-const handlebaHelpers = require("./helpers/hbshelper");
+import handlebaHelpers from "./helpers/hbshelper";
 import HomeRouter from "./routes/web/home";
 import ServiceRoute from "./routes/web/service";
 import PortfolioRoute from "./routes/web/portfolio";
@@ -12,7 +12,7 @@ const app = express();
 const port = 3000;
 async function main() {
     app.use(express.json());
-    app.use(express.urlencoded());
+    app.use(express.urlencoded({ extended: true }));
     app.set('view engine', 'hbs');
     app.engine('hbs', engine({
         layoutsDir: __dirname + '/views/layouts',
@@ -31,10 +31,15 @@ async function main() {
     app.all("*", (req, res) => {
         res.render("404", { layout: '404' });
     });
+    app.use((err, req, res, next) => {
+        console.error(err.stack);
+        res.status(500).send("Something broke!");
+    });
     app.listen(port, () => {
         console.log(`Server is listening on port ${port}`);
     });
 }
+console.log("Starting the server...");
 main()
     .then(async () => {
     console.log("connectiong to prisma......");

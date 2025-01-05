@@ -1,4 +1,4 @@
-module.exports = {
+const helpers = {
 
     // ifElse:(condition: boolean, valueIfTrue: string, valueIfFalse: string)=>{
     //     return condition ? valueIfTrue : valueIfFalse
@@ -50,3 +50,5 @@ module.exports = {
       }
 
 }
+
+export default helpers;
