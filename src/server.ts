@@ -1,4 +1,3 @@
-
 import express, { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client"
 import hbs, { engine, create } from "express-handlebars";

@@ -4,7 +4,7 @@
   "description": "cate events website",
   "main": "server.ts",
   "scripts": {
-    "start": "ts-node-dev --respawn --transpile-only --exit-child src/server.ts",
+    "start": "ts-node-dev --respawn --transpile-only --exit-child src/server.js",
     "db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
     "db:push": "npx prisma db push",
     "test": "echo \"Error: no test specified\" && exit 1"
