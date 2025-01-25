@@ -4,7 +4,7 @@
   "description": "cate events website",
   "main": "server.js",
   "scripts": {
-    "start": "src/server.js",
+    "start": "node src/server.js",
     "db:migrate": "npx prisma generate",
     "db:push": "npx prisma db push",
     "test": "echo \"Error: no test specified\" && exit 1"
