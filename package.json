@@ -2,9 +2,9 @@
   "name": "255_events",
   "version": "1.0.0",
   "description": "cate events website",
-  "main": "server.ts",
+  "main": "server.js",
   "scripts": {
-    "start": "ts-node-deploy --respawn --transpile-only --exit-child src/server.ts",
+    "start": "src/server.js",
     "db:migrate": "npx prisma generate",
     "db:push": "npx prisma db push",
     "test": "echo \"Error: no test specified\" && exit 1"
