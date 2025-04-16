@@ -32,6 +32,10 @@ router.get("/about", (req, res) => __awaiter(void 0, void 0, void 0, function* (
     const team = yield server_1.prisma.team.findMany();
     res.render("about", { layout: 'index', team });
 }));
+router.get("/about-cate", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const team = yield server_1.prisma.team.findMany();
+    res.render("about_cate", { layout: 'index', team });
+}));
 router.get("/contact", (req, res) => {
     res.render("contact", { layout: 'index' });
 });

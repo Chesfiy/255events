@@ -28,6 +28,11 @@ router.get("/about", async (req: Request, res: Response) =>{
     res.render("about",{layout: 'index', team})
 })
 
+router.get("/about-cate", async (req: Request, res: Response) =>{
+
+  const team = await prisma.team.findMany()
+  res.render("about_cate",{layout: 'index', team})
+})
 
 router.get("/contact", (req: Request, res: Response) =>{
 
